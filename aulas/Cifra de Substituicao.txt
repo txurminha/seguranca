@@ -1,0 +1,39 @@
+Criar um alfabeto que seja INVERSÍVEL, ou seja, que não repita simbolos e possa voltar ao simbolo gerador
+
+O | C
+-----
+A | D
+B | A
+C | E
+D | C
+E | B
+
+
+acacaacaba
+----------
+dededdedad
+
+A chave será todo o alfabeto
+
+
+- Fazer a criptoanalise dessa cifra.
+Texto em claro e texto escuro, podemos conseguir chave equivalente, mas nao exata pois pode nao ter todas as letras da chave.
+
+-Analise das frequências:
+Usar um dicionário e contar as frequências de cada letra. As letras mais frequentes tem grandes chances de serem vogais.
+Pegar livros do projeto Gutemberg que tem em TXT, ai podemos concatena-los e usar como dicionario.
+
+-Método de Busca
+Comparar a chave candidata da comparação da frequência com o dicionario. Se não encontrar as palavras no dicionário gerar uma nova permutação da chave.
+Percorrer o texto em digramas ("th") e trigramas ("ing") e combinar para quebrar partes da chave diferentes.
+
+-Análise de Padrões
+Pegar palavras e atribuir numeros para cada letra nova encontrada na palavras. Fazer para o texto cifrado e dicionario:
+casa = 0121
+faca = 0121
+carro = 01223
+pessoa = 012234
+
+Comparar trechos do texto cifrado (Ex:0121) com o dicionario e verificar as letras com menos frequência da Analise de Frequencia.
+Começar varrendo o texto e o dicionario com plavras de maior tamanho (7 por exemplo, pois aparecem em menor probabilidade),
+ai vai percorrendo com janela tamanho 7 e comparando se o padrão se repete.
