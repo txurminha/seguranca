@@ -1,0 +1,52 @@
+Compactação de Huffman
+
+Texto para comapctar:
+acasaamarelareal
+
+16 caracteres
+
+Os simbolos que aparecem podem ser representados com 3 bits
+a 000  7x
+c 001  1x
+s 010  1x
+m 011  1x
+r 100  2x
+e 101  2x
+l 110  2x
+
+16x3 = 48 bits
+
+
+1-Colocar cada elemento e afrequencia como uma folha de uma arvore:
+
+[a,7]  [c,1]  [s,1]  [m,1]  [r,2]  [e,2]  [l,2]
+
+2-Combinar as folhas com menos frequencias em um mesmo nodo
+Os nodos pais serão nodos de frequencias acumuladas dos nodos filhos
+
+Nesse exemplo a árvore ficaria:
+                [16]   --- perceba que 9+7 = 16
+              0/    \1
+             [9]    [a,7]
+           0/   \1
+          [5]     [4]__
+        0/  \1    0/   \1
+       [3] [l,2] [r,2]  [e,2]
+     0/   \1
+    [2]   [m,1]
+   0/  \1
+[c,1]  [s,1]
+
+
+O caminho da esquerda colocamos valor 0 e a direita valor 1 (é uma arvore binaria - 2 caminhos)
+Percorrendo o caminho da arvore conseguimos codificar a mensagem fazendo o termo mais frequente possuir menos bits
+
+a 000  7x | 1       = 7
+c 001  1x | 00000   = 5
+s 010  1x | 00001   = 5
+m 011  1x | 0001    = 4   
+r 100  2x | 010     = 6
+e 101  2x | 011     = 6
+l 110  2x | 001     = 6
+
+Somando da 39 bits. Economizamos 11 bits.
