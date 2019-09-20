@@ -1,0 +1,22 @@
+acasaamarelas
+
+Colocar o texto em uma matriz
+Ex: largura 4 -  isso será a chave
+
+a|c|a|s|
+a|a|m|a|
+r|e|l|a|
+s|x|x|x|
+
+O 'x' é só pra encher linguiça.
+Depois fazemos a matriz transposta e a mensagem estará cifrada:
+
+a|a|r|s|
+c|a|e|x|
+a|m|l|x|
+s|a|a|x|
+
+Quantas chaves possiveis teremos? Quantidade de caracteres do texto cifrado
+
+Essa operação NÃO é comutativa: Se cifrar 2 vezes precisamos ter as duas chaves para voltar ao original.
+
