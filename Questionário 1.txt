@@ -1,0 +1,9 @@
+Questionário 1
+
+1. Exagero do tamanho da chave sendo esse tempo muito maior que o tempo de vida da terra, com o atual poder computacional. 
+Geralemnte o tamanho é algo próximo a 10^100, além de que cifra é gareda com base em números primos grandes.
+
+2. De substituição. è a mais dificil de hacker devido a quantidade de possibilidades e a probabilidade de acerto.
+
+3. Cifra de trasnposição. Ela pode ser cifrada várias vazes, além dela poder ser usada para cifrar outras cifras.
+
